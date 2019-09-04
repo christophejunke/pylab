@@ -1,0 +1,9 @@
+PYTHONPATH=. ./run-pybind | sed -n '/cumtime/,+1p'
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   221926    1.496    0.000    1.837    0.000 {built-in method io.open}
+PYTHONPATH=. ./run-cython | sed -n '/cumtime/,+1p'
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   443852    0.213    0.000    0.340    0.000 codecs.py:319(decode)
+/usr/bin/python3.7 -c 'import test; test.run()' | sed -n '/cumtime/,+1p'
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   221926    1.170    0.000    1.447    0.000 {built-in method io.open}
