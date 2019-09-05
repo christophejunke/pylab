@@ -7,8 +7,8 @@ NAME := run
 
 PYTHON_SRC := test.py
 
-PYTHON := /usr/bin/python3.7
-PYTHON_CFG := /usr/bin/x86_64-linux-gnu-python3.7m-config
+PYTHON := python3
+PYTHON_CFG := python3-config
 
 PYTHON_CFLAGS += $(shell $(PYTHON_CFG) --cflags)
 PYTHON_LDFLAGS += $(shell $(PYTHON_CFG) --ldflags)

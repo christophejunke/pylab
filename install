@@ -1,0 +1,6 @@
+Dependencies:
+
+    pybind11-dev
+    python3-pybind11
+    libpython-dev
+    cython3

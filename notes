@@ -1,0 +1,11 @@
+approach
+========
+
+- compile python files with cython
+- import .so modules from pybind11
+
+measures
+========
+
+- cython has shortest cumulative time
+- but, ncalls is twice as large?

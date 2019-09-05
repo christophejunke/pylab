@@ -7,3 +7,13 @@ PYTHONPATH=. ./run-cython | sed -n '/cumtime/,+1p'
 /usr/bin/python3.7 -c 'import test; test.run()' | sed -n '/cumtime/,+1p'
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
    221926    1.215    0.000    1.499    0.000 {built-in method io.open}
+
+PYTHONPATH=. ./run-pybind | sed -n '/cumtime/,+1p'
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   221926    1.562    0.000    1.848    0.000 {built-in method io.open}
+PYTHONPATH=. ./run-cython | sed -n '/cumtime/,+1p'
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   443852    0.202    0.000    0.345    0.000 codecs.py:318(decode)
+python3 -c 'import test; test.run()' | sed -n '/cumtime/,+1p'
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   221926    1.290    0.000    1.501    0.000 {built-in method io.open}
